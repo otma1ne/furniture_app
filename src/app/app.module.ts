@@ -15,6 +15,9 @@ import { PrimaryBtnComponent } from './shared/primary-btn/primary-btn.component'
 import { CategoriesComponent } from './home/categories/categories.component';
 import { TrendingComponent } from './home/trending/trending.component';
 import { ProductCardComponent } from './shared/product-card/product-card.component';
+import { NewDesignComponent } from './home/new-design/new-design.component';
+import { BannerComponent } from './home/banner/banner.component';
+import { SecondaryBtnComponent } from './shared/secondary-btn/secondary-btn.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { ProductCardComponent } from './shared/product-card/product-card.compone
     CategoriesComponent,
     TrendingComponent,
     ProductCardComponent,
+    NewDesignComponent,
+    BannerComponent,
+    SecondaryBtnComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule],
   providers: [],

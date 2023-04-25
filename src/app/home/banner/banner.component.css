@@ -1,0 +1,38 @@
+.banner {
+    margin-top: 120px;
+    margin-bottom: 200px;
+}
+
+.banner .container {
+    background: url(../../../assets/images/h1-bn-4.jpg);
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr .7fr;
+    padding: 80px 0;
+    color: white;
+}
+
+.banner .container .right__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.banner .container .right__side .title {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-left: 2px solid white;
+    height: max-content;
+    padding-left: 20px;
+}
+
+
+.banner .container .right__side .layout__img {
+    margin: 60px 0;
+    height: 200px;
+    object-fit: contain;
+    object-position: left;
+}

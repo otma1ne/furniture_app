@@ -1,0 +1,15 @@
+.secondary__btn {
+    padding: 8px 32px;
+    background: right / 0 100% no-repeat linear-gradient(white, white);
+    border: 2px solid white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-size .3s ease-in-out;
+    color: white;
+}
+
+.secondary__btn:hover {
+    background: left / 100% 100% no-repeat linear-gradient(white, white);
+    color: black;
+    font-weight: 600;
+}

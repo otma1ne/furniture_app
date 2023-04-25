@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Product } from 'src/app/shared/models/product';
 
 @Component({
-  selector: 'app-trending',
-  templateUrl: './trending.component.html',
-  styleUrls: ['./trending.component.css'],
+  selector: 'app-new-design',
+  templateUrl: './new-design.component.html',
+  styleUrls: ['./new-design.component.css'],
 })
-export class TrendingComponent {
+export class NewDesignComponent {
   productsList: Array<Product> = [
     {
       id: '1',

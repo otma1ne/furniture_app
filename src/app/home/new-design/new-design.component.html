@@ -1,0 +1,29 @@
+<section class="new__design">
+  <div class="max__width">
+    <div class="title__filter">
+      <div class="title">New Design</div>
+      <ul class="filter">
+        <li class="active">All</li>
+        <li>Furniture</li>
+        <li>Chairs</li>
+        <li>Lighting</li>
+        <li>Decor</li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="categorie">
+        <img src="../../../assets/images/h1-bn-3.jpg" alt="" />
+        <div class="info">
+          <div class="title">Furniture</div>
+          <div class="quantity">4 items</div>
+        </div>
+      </div>
+      <div class="products">
+        <app-product-card
+          *ngFor="let product of productsList"
+          [product]="product"
+        ></app-product-card>
+      </div>
+    </div>
+  </div>
+</section>

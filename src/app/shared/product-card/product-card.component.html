@@ -1,4 +1,10 @@
 <div class="product__card">
-  <div class="img__container"></div>
-  <div class="product__info"></div>
+  <div class="img__container">
+    <img [src]="'../../../assets/images/' + product?.image" alt="" />
+    <button class="product__btn">Add To Cart</button>
+  </div>
+  <div class="product__info">
+    <div class="product__name">{{ product?.name }}</div>
+    <div class="product__price">${{ product?.price?.toFixed(2) }}</div>
+  </div>
 </div>
