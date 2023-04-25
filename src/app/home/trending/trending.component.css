@@ -1,0 +1,32 @@
+.trending {
+    margin-top: 140px;
+    margin-bottom: 200px;
+}
+
+.trending .main__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.trending .title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.trending .text {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--textColorGray);
+}
+
+.trending .products__container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}

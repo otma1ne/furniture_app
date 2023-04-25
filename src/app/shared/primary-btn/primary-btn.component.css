@@ -1,0 +1,14 @@
+.primary__btn {
+    padding: 8px 32px;
+    background: right / 0 100% no-repeat linear-gradient(black, black);
+    border: 2px solid black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-size .3s ease-in-out;
+}
+
+.primary__btn:hover {
+    background: left / 100% 100% no-repeat linear-gradient(black, black);
+    color: white;
+    font-weight: 500;
+}

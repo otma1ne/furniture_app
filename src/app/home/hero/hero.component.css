@@ -1,0 +1,110 @@
+.hero {
+    height: calc(100vh - 118px);
+}
+
+.hero .hero__swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .hero__swiper .swiper__slide {
+    background: #fef4ef;
+}
+
+.hero .hero__swiper .swiper__slide.two {
+    background: #e5f4f7;
+}
+
+.hero .hero__swiper .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.hero .hero__swiper .container .left__side .title {
+    font-size: 66px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero .hero__swiper .container .left__side .sub__title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--textColorGray);
+}
+
+.hero .hero__swiper .container .left__side .divider {
+    margin-top: 30px;
+    width: 30px;
+    height: 2px;
+    background: var(--primaryColor);
+}
+
+.hero .hero__swiper .container .left__side .sub__title span {
+    color: black;
+    font-weight: 600;
+}
+
+.hero .hero__swiper .container .left__side .price {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero .hero__swiper .container .left__side .primary__btn {
+    margin-top: 30px;
+}
+
+.hero .hero__swiper .container .right__side {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero .hero__swiper .container .right__side .bg {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    right: 0;
+}
+
+.hero .hero__swiper .container .right__side .img1 {
+    position: absolute;
+    width: 100%;
+    left: -28%;
+    bottom: 0;
+}
+
+.hero .hero__swiper .container .right__side .slide2.img1 {
+    top: 0;
+    height: 50%;
+    object-fit: contain;
+    left: 0;
+}
+
+.hero .hero__swiper .container .right__side .slide2.img2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70%;
+    object-fit: contain;
+}
+
+
+.hero .hero__swiper .container .right__side .slide2.img3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30%;
+    object-fit: contain;
+}
+
+.hero .hero__swiper .container .right__side .slide2.img4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    object-fit: contain;
+}

@@ -1,0 +1,75 @@
+<section class="hero">
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="50"
+    effect="fade"
+    class="hero__swiper"
+  >
+    <ng-template swiperSlide>
+      <div class="max__width swiper__slide">
+        <div class="container">
+          <div class="left__side">
+            <div class="title animate__animated animate__bounce">
+              Linas Crew
+            </div>
+            <div class="sub__title">Designed by <span>Nicolash</span></div>
+            <div class="divider"></div>
+            <div class="price">$183.76</div>
+            <div class="primary__btn">
+              <app-primary-btn></app-primary-btn>
+            </div>
+          </div>
+          <div class="right__side">
+            <img
+              src="../../../assets/images/home8_images_bgr-min.png"
+              alt="slider bg1"
+              class="bg"
+            />
+            <img
+              src="../../../assets/images/home8_images_sl3.png"
+              alt="img1"
+              class="img1"
+            />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="max__width swiper__slide two">
+        <div class="container">
+          <div class="left__side">
+            <div class="title">Una Chair</div>
+            <div class="sub__title">Designed by <span>Nicolash</span></div>
+            <div class="divider"></div>
+            <div class="price">$102.84</div>
+            <div class="primary__btn">
+              <app-primary-btn></app-primary-btn>
+            </div>
+          </div>
+          <div class="right__side">
+            <img
+              src="../../../assets/images/slide8-11.png"
+              alt="slider bg1"
+              class="slide2 img1"
+            />
+            <img
+              src="../../../assets/images/home8_layer6.png"
+              alt="slider bg1"
+              class="slide2 img2"
+            />
+            <img
+              src="../../../assets/images/home8_layer7.png"
+              alt="slider bg1"
+              class="slide2 img3"
+            />
+            <img
+              src="../../../assets/images/home8_layer8.png"
+              alt="slider bg1"
+              class="slide2 img4"
+            />
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</section>

@@ -1,0 +1,53 @@
+.categories {
+    margin-top: 80px;
+}
+
+.categories .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.categories .container .item {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #f6f6f6;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.categories .container .item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    z-index: 1;
+    transition: .3s ease-in-out;
+}
+
+.categories .container .item:hover img {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+
+.categories .container .item .item__info {
+    padding: 40px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.categories .container .item .item__info .title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.categories .container .item .item__info .quantity {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--textColorGray);
+}

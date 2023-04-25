@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "~swiper/swiper-bundle.css";
+
+
+:root {
+    --primaryColor: #f9d4bd;
+    --textColorGray: #666666;
+    --fontFamily: "Montserrat", arial;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: var(--fontFamily);
+}
+
+/* scroll bar style */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 8px;
+}
+
+/* Global padding */
+
+.max__width {
+    padding: 0 160px;
+    width: 100%;
+    max-width: 2000px;
+    height: 100%;
+    margin: auto;
+}
