@@ -1,5 +1,7 @@
 .hero {
+    margin-top: 117px;
     height: calc(100vh - 118px);
+    max-height: 900px;
 }
 
 .hero .hero__swiper {

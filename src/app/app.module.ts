@@ -18,6 +18,7 @@ import { ProductCardComponent } from './shared/product-card/product-card.compone
 import { NewDesignComponent } from './home/new-design/new-design.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { SecondaryBtnComponent } from './shared/secondary-btn/secondary-btn.component';
+import { BlogComponent } from './home/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SecondaryBtnComponent } from './shared/secondary-btn/secondary-btn.comp
     NewDesignComponent,
     BannerComponent,
     SecondaryBtnComponent,
+    BlogComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, SwiperModule],
   providers: [],
