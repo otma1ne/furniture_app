@@ -1,1 +1,60 @@
-<p>shop works!</p>
+<section class="shop">
+  <div class="breadcrumb__container">
+    <div class="title">Shop</div>
+    <ul class="beadcrumb">
+      <li>Home</li>
+      <li>Shop</li>
+    </ul>
+  </div>
+  <div class="max__width">
+    <div class="shop__container">
+      <div class="sticky__filter">
+        <div class="filter">
+          <div class="item">
+            <div class="title">Product Category</div>
+            <ul class="categories">
+              <li>All <span>(15)</span></li>
+              <li>Strools <span>(5)</span></li>
+              <li>Sofas <span>(2)</span></li>
+              <li>Furnitures <span>(3)</span></li>
+              <li>Chairs <span>(6)</span></li>
+              <li>Lighting <span>(5)</span></li>
+              <li>Decor <span>(1)</span></li>
+            </ul>
+          </div>
+          <div class="item">
+            <div class="title">Filter by price</div>
+            <form>
+              <input class="price__range" type="range" />
+              <div class="info">
+                <p>Price $0 - 1000$</p>
+                <app-primary-btn textBtn="Filter"></app-primary-btn>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="shop__body">
+        <div class="sort__info">
+          <div class="sort__icon">
+            <div class="icon">
+              <img src="../../assets/icons/Filter_alt.svg" alt="filter icon" />
+            </div>
+            <select name="sort">
+              <option value="default">Default Sorting</option>
+              <option value="default">Sort By Name</option>
+              <option value="default">Sort By Price Asc</option>
+              <option value="default">Sort By Price Desc</option>
+            </select>
+          </div>
+        </div>
+        <div class="products">
+          <app-product-card
+            *ngFor="let product of productsList"
+            [product]="product"
+          ></app-product-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

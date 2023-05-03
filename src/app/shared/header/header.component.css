@@ -51,6 +51,7 @@ nav .nav__container .logo {
     width: 140px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 nav .nav__container .logo img {

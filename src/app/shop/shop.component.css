@@ -1,0 +1,129 @@
+.shop {
+    margin-top: 117px;
+}
+
+.shop .breadcrumb__container {
+    height: 200px;
+    background: url(../../assets/images/bg-beagrumb.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shop .breadcrumb__container .title {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.shop .breadcrumb__container .beadcrumb {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--textColorGray);
+    display: flex;
+    gap: 25px;
+}
+
+.shop .breadcrumb__container .beadcrumb li {
+    position: relative;
+}
+
+.shop .breadcrumb__container .beadcrumb li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background: url(../../assets/icons/Expand_right_light.svg);
+    background-size: contain;
+    top: 60%;
+    transform: translateY(-50%);
+    right: -19px;
+}
+
+.shop .shop__container {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 60px;
+}
+
+.shop .shop__container .filter {
+    position: sticky;
+    top: 140px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+.shop .shop__container .filter .title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #c4c4c45d;
+}
+
+
+.shop .shop__container .filter .categories {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--textColorGray);
+    font-weight: 500;
+}
+
+.shop .shop__container .filter .categories li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop .shop__container .filter .categories li span {
+    font-size: 10px;
+}
+
+.shop .shop__container .filter .item .price__range {
+    margin-top: 30px;
+    width: 100%;
+    accent-color: black;
+    height: 4px;
+}
+
+.shop .shop__container .filter .item .info {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.shop .shop__container .shop__body .sort__icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop .shop__container .shop__body .sort__icon .icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--textColorGray);
+    cursor: pointer;
+}
+
+.shop .shop__container .shop__body .products {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}

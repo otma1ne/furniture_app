@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/shared/models/product';
 
 @Component({
@@ -7,6 +8,8 @@ import { Product } from 'src/app/shared/models/product';
   styleUrls: ['./trending.component.css'],
 })
 export class TrendingComponent {
+  constructor(private router: Router) {}
+
   productsList: Array<Product> = [
     {
       id: '1',
@@ -33,4 +36,8 @@ export class TrendingComponent {
       image: 'the-adventure-begins-framed-poster.jpg',
     },
   ];
+
+  navigateToShop() {
+    this.router.navigate(['/shop']);
+  }
 }

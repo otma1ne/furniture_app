@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SwiperModule } from 'swiper/angular';
+import { StarRatingModule } from 'angular-star-rating';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { NewDesignComponent } from './home/new-design/new-design.component';
 import { BannerComponent } from './home/banner/banner.component';
 import { SecondaryBtnComponent } from './shared/secondary-btn/secondary-btn.component';
 import { BlogComponent } from './home/blog/blog.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -38,8 +40,14 @@ import { BlogComponent } from './home/blog/blog.component';
     BannerComponent,
     SecondaryBtnComponent,
     BlogComponent,
+    DetailsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SwiperModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SwiperModule,
+    StarRatingModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

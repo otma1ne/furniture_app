@@ -1,14 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "~swiper/swiper-bundle.css";
+@import '~css-star-rating/css/star-rating';
 
+
+/* Stars rating */
+
+.rating {
+    width: max-content;
+}
+
+.star-container {
+    gap: 1px;
+    margin-left: 0;
+}
+
+.rating.color-ok .star-container .star svg,
+.rating.color-negative .star-container .star svg,
+.rating.color-positive .star-container .star svg {
+    fill: #ffc058 !important;
+}
+
+.star.medium, .rating.medium .star.label-value,
+.rating.medium .rating.star .star.label-value,
+.rating.medium .rating.label-value .star,
+.rating.medium .star {
+    width: 16px;
+    height: 16px;
+}
 
 :root {
     --primaryColor: #f9d4bd;
     --textColorGray: #666666;
     --fontFamily: "Montserrat", arial;
+    --color-ok-rating: black;
 }
+
 
 * {
     margin: 0;
@@ -44,4 +71,24 @@
     max-width: 2000px;
     height: 100%;
     margin: auto;
+}
+
+/* input && select style */
+
+select {
+    position: relative;
+    padding: 10px 60px 10px 10px;
+    color: var(--textColorGray);
+    font-weight: 500;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid var(--textColorGray);
+    background: url(./assets/icons/Expand_down_light.svg);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;
+}
+
+select option {
+    font-weight: 500;
 }

@@ -1,0 +1,138 @@
+.details {
+    margin-top: 117px;
+}
+
+.details .breadcrumb__container {
+    height: 200px;
+    background: url(../../assets/images/bg-beagrumb.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details .breadcrumb__container .title {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.details .breadcrumb__container .beadcrumb {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--textColorGray);
+    display: flex;
+    gap: 25px;
+}
+
+.details .breadcrumb__container .beadcrumb li {
+    position: relative;
+}
+
+.details .breadcrumb__container .beadcrumb li:not(:last-child):after {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    background: url(../../assets/icons/Expand_right_light.svg);
+    background-size: contain;
+    top: 60%;
+    transform: translateY(-50%);
+    right: -19px;
+}
+
+.details .details__body {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.details .details__body .imgs__container {
+    display: grid;
+    grid-template-rows: 1fr 120px;
+    gap: 10px;
+}
+
+.details .details__body .imgs__container .swiper__container {
+    padding-top: 80%;
+    position: relative;
+}
+
+.details .details__body .imgs__container .swiper__container .details__swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.details .details__body .imgs__container .swiper__container .details__swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details .details__body .imgs__container .swiper__navigations {
+    display: flex;
+    gap: 10px;
+}
+
+.details .details__body .imgs__container .swiper__navigations img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.details .details__body .imgs__container .swiper__navigations img.active {
+    border: 2px solid var(--primaryColor);
+}
+
+.details .details__body .details__container .stock__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.details .details__body .details__container .stock__info label {
+    border: 2px solid #47ae74;
+    color: #47ae74;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 4px;
+}
+
+.details .details__body .details__container .stock__info .quantity {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--textColorGray);
+}
+
+.details .details__body .details__container .product__name {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.details .details__body .details__container .rating__container {
+    margin-top: 14px;
+    display: flex;
+    gap: 4px;
+}
+
+.details .details__body .details__container .rating__container .reviews__numbers {
+    font-size: 12px;
+    margin-top: 1px;
+    font-weight: 500;
+    color: var(--textColorGray);
+}
+
+.details .details__body .details__container .product__details {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--textColorGray);
+}
