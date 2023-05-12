@@ -3,6 +3,10 @@
 @import "~swiper/swiper-bundle.css";
 @import '~css-star-rating/css/star-rating';
 
+::selection {
+    background-color: var(--primaryColor);
+    color: white;
+}
 
 /* Stars rating */
 

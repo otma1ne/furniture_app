@@ -14,4 +14,13 @@ export class DetailsComponent {
   slideToIndex(index: number) {
     this.swiper?.swiperRef.slideTo(index);
   }
+  quantity: number = 1;
+
+  incrementQuantity() {
+    if (this.quantity < 10) this.quantity = this.quantity + 1;
+  }
+
+  decrementQuantity() {
+    if (this.quantity > 1) this.quantity = this.quantity - 1;
+  }
 }

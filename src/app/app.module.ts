@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SwiperModule } from 'swiper/angular';
 import { StarRatingModule } from 'angular-star-rating';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { BannerComponent } from './home/banner/banner.component';
 import { SecondaryBtnComponent } from './shared/secondary-btn/secondary-btn.component';
 import { BlogComponent } from './home/blog/blog.component';
 import { DetailsComponent } from './details/details.component';
+import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +43,12 @@ import { DetailsComponent } from './details/details.component';
     SecondaryBtnComponent,
     BlogComponent,
     DetailsComponent,
+    ScrollTopComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SwiperModule,
     StarRatingModule.forRoot(),
   ],

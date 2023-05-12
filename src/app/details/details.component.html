@@ -52,6 +52,7 @@
           ></star-rating>
           <div class="reviews__numbers">(5 customers reviews)</div>
         </div>
+        <div class="product__price">$345.99</div>
         <div class="product__details">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           magni, cupiditate dolores vero assumenda repellendus quam excepturi,
@@ -59,6 +60,25 @@
           temporibus voluptatem et, eius ea eos ipsa molestiae quae dolores
           quaerat provident aliquid soluta maiores dolorem perferendis aperiam
           eveniet, porro libero quasi doloribus, obcaecati ex.
+          <br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
+          repellendus! Eos sed molestiae, consectetur architecto reiciendis
+          nesciunt libero autem excepturi officia, aliquam earum quos pariatur
+          ipsam eligendi perferendis error provident.
+        </div>
+        <div class="quantity__btn">
+          <div class="quantity__control">
+            <input type="text" [value]="quantity" />
+            <div class="controls">
+              <button (click)="incrementQuantity()">
+                <img src="../../assets/icons/Expand_up.svg" alt="icon up" />
+              </button>
+              <button (click)="decrementQuantity()">
+                <img src="../../assets/icons/Expand_down.svg" alt="icon down" />
+              </button>
+            </div>
+          </div>
+          <app-primary-btn textBtn="Add to cart"></app-primary-btn>
         </div>
       </div>
     </div>

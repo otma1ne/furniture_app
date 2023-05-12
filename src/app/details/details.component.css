@@ -130,9 +130,58 @@
     color: var(--textColorGray);
 }
 
+.details .details__body .details__container .product__price {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .details .details__body .details__container .product__details {
     margin-top: 20px;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 26px;
     color: var(--textColorGray);
+}
+
+.details .details__body .details__container .quantity__btn {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.details .details__body .details__container .quantity__btn .quantity__control {
+    display: flex;
+    border: 1px solid #c4c4c4;
+
+}
+
+.details .details__body .details__container .quantity__btn .quantity__control input {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+}
+
+.details .details__body .details__container .quantity__btn .quantity__control .controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.details .details__body .details__container .quantity__btn .quantity__control .controls button {
+    width: 18px;
+    height: 18px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 12px;
+}
+
+.details .details__body .details__container .quantity__btn .quantity__control .controls button img {
+    width: 16px;
 }

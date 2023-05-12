@@ -1,0 +1,36 @@
+.scroll__top {
+    position: fixed;
+    width: 38px;
+    height: 38px;
+    right: -100%;
+    bottom: 30px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: .3s ease-in-out;
+    background: transparent;
+}
+
+.scroll__top.active {
+    right: 30px;
+}
+
+.scroll__top:hover {
+    background: black;
+    color: white;
+    font-weight: 500;
+}
+
+
+.scroll__top .arrow__icon {
+    width: 20px;
+    height: 20px;
+    stroke: black;
+}
+
+.scroll__top:hover .arrow__icon {
+    stroke: white;
+}
