@@ -34,7 +34,8 @@
           </div>
         </div>
       </div>
-      <div class="shop__body">
+      <app-loader *ngIf="isLoading" />
+      <div class="shop__body" *ngIf="!isLoading">
         <div class="sort__info">
           <div class="sort__icon">
             <div class="icon">
@@ -49,10 +50,7 @@
           </div>
         </div>
         <div class="products">
-          <app-product-card
-            *ngFor="let product of productsList"
-            [product]="product"
-          ></app-product-card>
+          <app-product-card *ngFor="let product of productsList" [product]="product"></app-product-card>
         </div>
       </div>
     </div>

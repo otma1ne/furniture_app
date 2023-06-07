@@ -23,6 +23,12 @@ import { SecondaryBtnComponent } from './shared/secondary-btn/secondary-btn.comp
 import { BlogComponent } from './home/blog/blog.component';
 import { DetailsComponent } from './details/details.component';
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
+import { SidecartComponent } from './sidecart/sidecart.component';
+import { OverlayComponent } from './shared/overlay/overlay.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { headerReducer } from './store/reducers/header.reducer';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +50,9 @@ import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
     BlogComponent,
     DetailsComponent,
     ScrollTopComponent,
+    SidecartComponent,
+    OverlayComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +60,8 @@ import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
     HttpClientModule,
     SwiperModule,
     StarRatingModule.forRoot(),
+    StoreModule.forRoot({ header: headerReducer }),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],

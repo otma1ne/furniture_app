@@ -7,15 +7,11 @@
     </ul>
   </div>
   <div class="max__width">
-    <div class="details__body">
+    <app-loader *ngIf="isLoading" />
+    <div class="details__body" *ngIf="!isLoading && error == '' ">
       <div class="imgs__container">
         <div class="swiper__container">
-          <swiper
-            #swiper
-            [virtual]="true"
-            [slidesPerView]="1"
-            class="details__swiper"
-          >
+          <swiper #swiper [virtual]="true" [slidesPerView]="1" class="details__swiper">
             <ng-template swiperSlide>
               <img src="../../assets/images/h1-bn-1.jpg" alt="product img" />
             </ng-template>
@@ -25,17 +21,8 @@
           </swiper>
         </div>
         <div class="swiper__navigations">
-          <img
-            src="../../assets/images/h1-bn-1.jpg"
-            alt="navigation"
-            class="active"
-            (click)="slideToIndex(0)"
-          />
-          <img
-            src="../../assets/images/h1-bn-2.jpg"
-            alt="navigation"
-            (click)="slideToIndex(1)"
-          />
+          <img src="../../assets/images/h1-bn-1.jpg" alt="navigation" class="active" (click)="slideToIndex(0)" />
+          <img src="../../assets/images/h1-bn-2.jpg" alt="navigation" (click)="slideToIndex(1)" />
         </div>
       </div>
       <div class="details__container">
@@ -43,13 +30,9 @@
           <label>In Stock</label>
           <div class="quantity">2077 items</div>
         </div>
-        <div class="product__name">MIRO DINING TABLE</div>
+        <div class="product__name">{{product?.name}}</div>
         <div class="rating__container">
-          <star-rating
-            [starType]="'svg'"
-            [rating]="3.6"
-            [readOnly]="true"
-          ></star-rating>
+          <star-rating [starType]="'svg'" [rating]="3.6" [readOnly]="true"></star-rating>
           <div class="reviews__numbers">(5 customers reviews)</div>
         </div>
         <div class="product__price">$345.99</div>

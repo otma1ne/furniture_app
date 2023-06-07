@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Product } from '../shared/models/product';
+import { ProductsService } from '../services/products.service';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-shop',
@@ -7,54 +10,25 @@ import { Product } from '../shared/models/product';
   styleUrls: ['./shop.component.css'],
 })
 export class ShopComponent {
-  productsList: Array<Product> = [
-    {
-      id: '1',
-      name: 'Teapot',
-      price: 21.45,
-      image: 'hummingbird-printed-t-shirt.jpg',
-    },
-    {
-      id: '2',
-      name: 'Miro dining table',
-      price: 21.45,
-      image: 'brown-bear-printed-sweater.jpg',
-    },
-    {
-      id: '3',
-      name: 'Janus table lamp',
-      price: 29.0,
-      image: 'the-best-is-yet-to-come-framed-poster.jpg',
-    },
-    {
-      id: '4',
-      name: 'Discus Floor and Table',
-      price: 29.5,
-      image: 'the-adventure-begins-framed-poster.jpg',
-    },
-    {
-      id: '1',
-      name: 'Teapot',
-      price: 21.45,
-      image: 'hummingbird-printed-t-shirt.jpg',
-    },
-    {
-      id: '2',
-      name: 'Miro dining table',
-      price: 21.45,
-      image: 'brown-bear-printed-sweater.jpg',
-    },
-    {
-      id: '3',
-      name: 'Janus table lamp',
-      price: 29.0,
-      image: 'the-best-is-yet-to-come-framed-poster.jpg',
-    },
-    {
-      id: '4',
-      name: 'Discus Floor and Table',
-      price: 29.5,
-      image: 'the-adventure-begins-framed-poster.jpg',
-    },
-  ];
+  productsList: Product[] = [];
+  isLoading = true;
+  error: string = '';
+
+  constructor(private productsService: ProductsService) {}
+
+  ngOnInit() {
+    this.productsService
+      .getProducts()
+      .pipe(
+        catchError((error) => {
+          this.isLoading = false;
+          this.error = 'An error occurred while fetching the products.';
+          return throwError(error);
+        })
+      )
+      .subscribe((products) => {
+        this.productsList = products;
+        this.isLoading = false;
+      });
+  }
 }

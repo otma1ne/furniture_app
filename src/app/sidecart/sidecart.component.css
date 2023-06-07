@@ -1,0 +1,17 @@
+.sidecart {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: -100%;
+    width: 30%;
+    min-width: 260px;
+    max-width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: .3s ease-in-out;
+}
+
+.sidecart.active {
+    right: 0;
+}
