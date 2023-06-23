@@ -1,10 +1,8 @@
 <div class="product__card">
   <div class="img__container">
-    <img
-      [src]="'../../../assets/images/' + product?.image"
-      alt="product image"
-      (click)="navigateToDetails()"
-    />
+    <img [src]="product && product.images && product.images[0] ? '../../../assets/images/' + product.images[0] : ''"
+      alt="product image" (click)="navigateToDetails()" />
+
     <button class="product__btn">Add To Cart</button>
   </div>
   <div class="product__info" (click)="navigateToDetails()">

@@ -16,6 +16,16 @@ export class ProductsService {
 
   getProduct(id: string) {
     const url = `${BASE_URL}/products/${id}`;
-    return this.http.get<Product>(url);
+    return this.http.get<any>(url);
+  }
+
+  getTrendingProduct() {
+    const url = `${BASE_URL}/products/trending`;
+    return this.http.get<Product[]>(url);
+  }
+
+  getNewDesign() {
+    const url = `${BASE_URL}/products/new-designs`;
+    return this.http.get<Product[]>(url);
   }
 }

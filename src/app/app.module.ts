@@ -29,6 +29,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { headerReducer } from './store/reducers/header.reducer';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
     SidecartComponent,
     OverlayComponent,
     LoaderComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

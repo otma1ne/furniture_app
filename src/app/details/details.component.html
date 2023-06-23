@@ -3,26 +3,26 @@
     <div class="title">Details</div>
     <ul class="beadcrumb">
       <li>Product</li>
-      <li>Product name</li>
+      <li>{{product?.name}}</li>
     </ul>
   </div>
   <div class="max__width">
     <app-loader *ngIf="isLoading" />
-    <div class="details__body" *ngIf="!isLoading && error == '' ">
+    <div class="error__container" *ngIf="error">
+      {{error}}
+    </div>
+    <div class="details__body" *ngIf="!isLoading && !error ">
       <div class="imgs__container">
         <div class="swiper__container">
-          <swiper #swiper [virtual]="true" [slidesPerView]="1" class="details__swiper">
-            <ng-template swiperSlide>
-              <img src="../../assets/images/h1-bn-1.jpg" alt="product img" />
-            </ng-template>
-            <ng-template swiperSlide>
-              <img src="../../assets/images/h1-bn-2.jpg" alt="product img" />
+          <swiper #swiper [virtual]="true" [slidesPerView]="1" class="details__swiper" [allowTouchMove]="false">
+            <ng-template swiperSlide *ngFor="let image of product?.images">
+              <img [src]="'../../assets/images/' + image" alt="product img" />
             </ng-template>
           </swiper>
         </div>
         <div class="swiper__navigations">
-          <img src="../../assets/images/h1-bn-1.jpg" alt="navigation" class="active" (click)="slideToIndex(0)" />
-          <img src="../../assets/images/h1-bn-2.jpg" alt="navigation" (click)="slideToIndex(1)" />
+          <img [src]="'../../assets/images/' + image" alt="navigation" [class]="{active : activeSlide == index}"
+            (click)="slideToIndex(index)" *ngFor="let image of product?.images; index as index;" />
         </div>
       </div>
       <div class="details__container">
@@ -32,23 +32,11 @@
         </div>
         <div class="product__name">{{product?.name}}</div>
         <div class="rating__container">
-          <star-rating [starType]="'svg'" [rating]="3.6" [readOnly]="true"></star-rating>
+          <star-rating [starType]="'svg'" [rating]=" product?.rating ?? 0" [readOnly]="true"></star-rating>
           <div class="reviews__numbers">(5 customers reviews)</div>
         </div>
         <div class="product__price">$345.99</div>
-        <div class="product__details">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
-          magni, cupiditate dolores vero assumenda repellendus quam excepturi,
-          pariatur eum id, similique consequatur enim? Distinctio sequi
-          temporibus voluptatem et, eius ea eos ipsa molestiae quae dolores
-          quaerat provident aliquid soluta maiores dolorem perferendis aperiam
-          eveniet, porro libero quasi doloribus, obcaecati ex.
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
-          repellendus! Eos sed molestiae, consectetur architecto reiciendis
-          nesciunt libero autem excepturi officia, aliquam earum quos pariatur
-          ipsam eligendi perferendis error provident.
-        </div>
+        <div class="product__details">{{product?.description}}</div>
         <div class="quantity__btn">
           <div class="quantity__control">
             <input type="text" [value]="quantity" />

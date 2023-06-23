@@ -13,6 +13,6 @@ export class ProductCardComponent {
   constructor(private route: Router) {}
 
   navigateToDetails() {
-    this.route.navigate(['/details/1']);
+    this.route.navigate(['/details/' + this.product?.id]);
   }
 }

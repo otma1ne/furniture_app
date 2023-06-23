@@ -1,0 +1,33 @@
+.search {
+    position: fixed;
+    z-index: 9999;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 50px 0;
+    height: max-content;
+    background: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: .3s ease-in-out;
+}
+
+.search.active {
+    top: 0;
+}
+
+.search .inputs__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search .inputs__container input {
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid #666666;
+    transition: .3s ease-in-out;
+}
+
+.search .inputs__container input:focus {
+    border: 1px solid black;
+}

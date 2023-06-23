@@ -35,7 +35,10 @@
         </div>
       </div>
       <app-loader *ngIf="isLoading" />
-      <div class="shop__body" *ngIf="!isLoading">
+      <div class="error__container" *ngIf="error">
+        {{ error }}
+      </div>
+      <div class="shop__body" *ngIf="!isLoading && !error">
         <div class="sort__info">
           <div class="sort__icon">
             <div class="icon">

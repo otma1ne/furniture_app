@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { catchError, throwError } from 'rxjs';
+import { ProductsService } from 'src/app/services/products.service';
 import { Product } from 'src/app/shared/models/product';
 
 @Component({
@@ -8,34 +10,32 @@ import { Product } from 'src/app/shared/models/product';
   styleUrls: ['./trending.component.css'],
 })
 export class TrendingComponent {
-  constructor(private router: Router) {}
+  isLoading = true;
+  error: string = '';
 
-  productsList: Array<Product> = [
-    {
-      id: '1',
-      name: 'Teapot',
-      price: 21.45,
-      image: ['hummingbird-printed-t-shirt.jpg'],
-    },
-    {
-      id: '2',
-      name: 'Miro dining table',
-      price: 21.45,
-      image: ['brown-bear-printed-sweater.jpg'],
-    },
-    {
-      id: '3',
-      name: 'Janus table lamp',
-      price: 29.0,
-      image: ['the-best-is-yet-to-come-framed-poster.jpg'],
-    },
-    {
-      id: '4',
-      name: 'Discus Floor and Table',
-      price: 29.5,
-      image: ['the-adventure-begins-framed-poster.jpg'],
-    },
-  ];
+  constructor(
+    private router: Router,
+    private productsService: ProductsService
+  ) {}
+
+  productsList: Product[] = [];
+
+  ngOnInit() {
+    this.productsService
+      .getTrendingProduct()
+      .pipe(
+        catchError((err) => {
+          this.isLoading = false;
+          this.error = err;
+          return throwError(err);
+        })
+      )
+      .subscribe((products) => {
+        console.log(products);
+        this.isLoading = false;
+        this.productsList = products;
+      });
+  }
 
   navigateToShop() {
     this.router.navigate(['/shop']);

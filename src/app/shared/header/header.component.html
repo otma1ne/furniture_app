@@ -21,7 +21,7 @@
         <li>Contact</li>
       </ul>
       <div class="icons">
-        <div class="icon">
+        <div class="icon" (click)="handleSearchClick(true)">
           <img src="../../../assets/icons/Search_alt.svg" alt="search icon" />
         </div>
         <div class="icon">
@@ -35,4 +35,7 @@
   </div>
   <app-overlay [isActive]="showCart" (onClick)="handleCartClick(false)"></app-overlay>
   <app-sidecart [isActive]="showCart"></app-sidecart>
+  <app-overlay [isActive]="showSearch" (onClick)="handleSearchClick(false)"></app-overlay>
+  <app-search [isActive]="showSearch"></app-search>
+
 </nav>

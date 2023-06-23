@@ -43,6 +43,12 @@
     right: -19px;
 }
 
+.shop .error__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .shop .shop__container {
     margin-top: 80px;
     display: grid;

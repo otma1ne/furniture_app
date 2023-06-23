@@ -17,6 +17,7 @@ SwiperCore.use([Virtual]);
 export class DetailsComponent {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
   product?: Product;
+  activeSlide: number = 0;
   isLoading: boolean = true;
   error: string = '';
 
@@ -33,13 +34,12 @@ export class DetailsComponent {
         .pipe(
           catchError((err) => {
             this.isLoading = false;
-            this.error = 'An error occurred while fetching the products.';
+            this.error = 'An error occurred while fetching the product.';
             return throwError(err);
           })
         )
         .subscribe((product) => {
-          this.product = product;
-          console.log(this.product);
+          this.product = product.product;
           this.isLoading = false;
         });
     });
@@ -47,6 +47,7 @@ export class DetailsComponent {
 
   slideToIndex(index: number) {
     this.swiper?.swiperRef.slideTo(index);
+    this.activeSlide = index;
   }
   quantity: number = 1;
 

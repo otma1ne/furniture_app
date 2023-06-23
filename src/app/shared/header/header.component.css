@@ -4,8 +4,7 @@ nav {
     z-index: 99999;
     width: 100%;
     background: white;
-    box-shadow: 0 8px 24px hsla(210, 8%, 62%, .2);
-
+    box-shadow: 0 8px 24px hsla(210, 8%, 62%, .1);
 }
 
 nav header {
@@ -70,7 +69,7 @@ nav .nav__container .menu {
 
 nav .nav__container .menu li {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
 }
 

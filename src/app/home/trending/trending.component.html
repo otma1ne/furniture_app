@@ -1,4 +1,4 @@
-<section class="trending">
+<section class="trending" *ngIf="!isLoading && productsList.length > 0 ">
   <div class="max__width">
     <div class="main__title">
       <div class="title">Trending this week</div>
@@ -8,10 +8,7 @@
       </div>
     </div>
     <div class="products__container">
-      <app-product-card
-        *ngFor="let product of productsList"
-        [product]="product"
-      ></app-product-card>
+      <app-product-card *ngFor="let product of productsList" [product]="product"></app-product-card>
     </div>
     <div class="all__product">
       <div class="text" (click)="navigateToShop()">+See All Product</div>
